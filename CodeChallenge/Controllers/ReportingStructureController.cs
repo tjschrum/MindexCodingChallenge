@@ -25,7 +25,7 @@ namespace CodeChallenge.Controllers
 
             var reportingStructure = _reportStructureService.GetReportStructureById(id);
 
-            if (reportingStructure.Employee == null)
+            if (reportingStructure.Employee == null || reportingStructure.Employee.EmployeeId == null)
                 return NotFound();
 
             return Ok(reportingStructure);

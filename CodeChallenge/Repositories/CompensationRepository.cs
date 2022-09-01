@@ -21,7 +21,8 @@ namespace CodeChallenge.Repositories
 
         public Compensation Add(Compensation compensation)
         {
-            if(compensation != null)
+            // EmployeeId is required as it is the primary key
+            if(compensation != null && compensation.EmployeeId != null)
             {
                 _compensationContext.Add(compensation);
             }

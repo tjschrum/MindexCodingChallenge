@@ -34,6 +34,15 @@ namespace CodeCodeChallenge.Tests.Integration
         }
 
         [TestMethod]
+        public void ReportingStructure_Empty_Returns_Created()
+        {
+            ReportingStructure rs = new ReportingStructure();
+
+            Assert.AreEqual(rs.Employee, null);
+            Assert.AreEqual(rs.NumberOfReports, 0);
+        }
+
+        [TestMethod]
         public void GetReportingStructureById_Returns_NotFound()
         {
             // Arrange
